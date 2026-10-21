@@ -4,6 +4,20 @@ Application Web de type « chatbot » très simple, pour une première prise de 
 **CDI** et **JSF**. Le serveur n'appelle pas de LLM : il applique un traitement local sur la question de l'utilisateur
 (voir « Traitement personnel » plus bas).
 
+## Aperçu du rendu
+
+L'application tourne sur un serveur local (`localhost`), qui n'est pas accessible depuis un autre ordinateur.
+Voici donc des captures d'écran de l'application en fonctionnement.
+
+**Rôle « Guide touristique », question « Salut Casablanca été » :** la réponse est la question lue à l'envers,
+avec les statistiques, et l'historique s'affiche à droite.
+
+![Réponse à une question](docs/rendu-reponse.jpg)
+
+**Envoi d'une question vide :** le message d'erreur s'affiche en rouge en haut de la page.
+
+![Erreur question vide](docs/rendu-erreur-question-vide.jpg)
+
 ## Versions utilisées
 
 | Élément | Version |
