@@ -31,7 +31,8 @@ public class GenerateurReponse implements Serializable { // Car CDI peut mettre 
      *   <li>pour la première question seulement (roleSysteme non null), les premiers mots du rôle système
      *   entre crochets, suivis d'un saut de ligne ;</li>
      *   <li>la question lue à l'envers, lettre par lettre (donc les mots sont aussi dans l'ordre inverse) ;</li>
-     *   <li>un saut de ligne puis des statistiques sur la question : nombre de mots, de lettres et de voyelles.</li>
+     *   <li>un saut de ligne puis des statistiques sur la question : nombre de mots, de lettres et de voyelles,
+     *   suivies d'un saut de ligne pour séparer cette réponse de la suivante.</li>
      * </ul>
      *
      * @param question    La question à traiter, non vide.
@@ -53,7 +54,7 @@ public class GenerateurReponse implements Serializable { // Car CDI peut mettre 
         long nbVoyelles = texte.toLowerCase(Locale.FRENCH).chars().filter(c -> VOYELLES.indexOf(c) >= 0).count();
         resultat.append("(").append(nbMots).append(" mot(s), ")
                 .append(nbLettres).append(" lettre(s), ")
-                .append(nbVoyelles).append(" voyelle(s))");
+                .append(nbVoyelles).append(" voyelle(s))\n");
 
         return resultat.toString();
     }
